@@ -65,14 +65,32 @@ void enterArrayData(double* arr)      // Let user input the elements for the dou
 }
 
 /*
-    consoleInput()
-    Allows the user to enter information for a Restaurant struct.
-    Arguments: none
-    Returns: a Restaurant struct that contains the user's input
+    putputArrayData()
+    Display the content of a double array
+    Arguments: a pointer to a double array
+    Returns: nothing
 */
-void outputArrayData(double*)      // Output the elements of the array to the console
+void outputArrayData(double* arr)      // Output the elements of the array to the console
 {
+    // Notify the outputting process
+    cout << "Outputting array elements: ";
 
+    // Iterate 5 times and output the values of the array elements
+    for (int i = 0; i < ARRAY_SIZE; i++)
+    {
+        // Display the value
+        cout << *(arr + i);
+
+        // If this is not the final element
+        if (i != ARRAY_SIZE - 1)
+        {
+            // We add a comma and a space
+            cout << ", ";
+        }
+    }
+
+    // Enter a new line after displaying all the elements
+    cout << endl;
 }
 
 /*
