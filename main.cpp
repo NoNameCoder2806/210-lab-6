@@ -31,7 +31,7 @@ int main()
     outputArrayData(arr);
 
     // Calculate the sum of the array
-    int sum = sumArray(arr);
+    double sum = sumArray(arr);
     cout << "Sum of values: " << sum << endl;      // Output the sum value to the console
 
     return 0;
@@ -99,7 +99,18 @@ void outputArrayData(double* arr)      // Output the elements of the array to th
     Arguments: none
     Returns: a Restaurant struct that contains the user's input
 */
-double sumArray(double*)      // Calculate the sum of the array
+double sumArray(double* arr)      // Calculate the sum of the array
 {
-    return 0;
+    // Declare a new variable to hold the sum value
+    double sum = 0;
+
+    // Iterate through the array and calculate the sum
+    for (int i = 0; i < ARRAY_SIZE; i++)
+    {
+        // Add the value of the current current element
+        sum += *(arr + i);
+    }
+
+    // Return the sum value
+    return sum;
 }
