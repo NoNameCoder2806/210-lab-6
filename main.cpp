@@ -20,7 +20,7 @@ int main()
 {
     // Dynamically declare a double array that holds 5 double elements
     double* arr = nullptr;
-    arr = new double[5];
+    arr = new double[ARRAY_SIZE];
 
     // Let user enter the elements of the array
     enterArrayData(arr);
