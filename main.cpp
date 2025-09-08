@@ -39,13 +39,29 @@ int main()
 
 // Function implementations
 /*
-    consoleInput()
-    Allows the user to enter information for a Restaurant struct.
-    Arguments: none
-    Returns: a Restaurant struct that contains the user's input
+    enterArrayData()
+    Prompts the user to enter the value of the 5 elements of the array
+    Arguments: a pointer to a double array
+    Returns: nothing
 */
-void enterArrayData(double* arr)       // Let user input the elements for the double array
+void enterArrayData(double* arr)      // Let user input the elements for the double array
 {
+    // Output a message to notify the user for the array entry
+    cout << "Data entry for the array:" << endl;
+
+    // Iterate 5 times and assign the entered values to the first 5 elements
+    for (int i = 0; i < ARRAY_SIZE; i++)
+    {
+        // Prompt the user to enter the values for each element
+        cout << "    > Element #" << i << ": ";
+
+        // Store the value entered by the user
+        cin >> *(arr + i);
+        cin.ignore(1000, 10);
+    }
+
+    // Notify that the data entry is completed
+    cout << "Data entry complete!" << endl;
 }
 
 /*
@@ -54,7 +70,10 @@ void enterArrayData(double* arr)       // Let user input the elements for the do
     Arguments: none
     Returns: a Restaurant struct that contains the user's input
 */
-void outputArrayData(double*);      // Output the elements of the array to the console
+void outputArrayData(double*)      // Output the elements of the array to the console
+{
+
+}
 
 /*
     consoleInput()
@@ -62,4 +81,7 @@ void outputArrayData(double*);      // Output the elements of the array to the c
     Arguments: none
     Returns: a Restaurant struct that contains the user's input
 */
-double sumArray(double*);           // Calculate the sum of the array
+double sumArray(double*)      // Calculate the sum of the array
+{
+    return 0;
+}
