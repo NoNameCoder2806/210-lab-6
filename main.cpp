@@ -34,6 +34,9 @@ int main()
     double sum = sumArray(arr);
     cout << "Sum of values: " << sum << endl;      // Output the sum value to the console
 
+    // Delete the pointer and free memory
+    delete[] arr;
+
     return 0;
 }
 
