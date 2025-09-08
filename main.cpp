@@ -65,7 +65,7 @@ void enterArrayData(double* arr)      // Let user input the elements for the dou
 }
 
 /*
-    putputArrayData()
+    outputArrayData()
     Display the content of a double array
     Arguments: a pointer to a double array
     Returns: nothing
@@ -94,10 +94,10 @@ void outputArrayData(double* arr)      // Output the elements of the array to th
 }
 
 /*
-    consoleInput()
-    Allows the user to enter information for a Restaurant struct.
-    Arguments: none
-    Returns: a Restaurant struct that contains the user's input
+    sumArray()
+    Calculates the sum of the array
+    Arguments: a pointer to the double array
+    Returns: the sum of the elements of the array
 */
 double sumArray(double* arr)      // Calculate the sum of the array
 {
